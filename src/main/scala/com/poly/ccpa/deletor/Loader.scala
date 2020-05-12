@@ -75,18 +75,6 @@ object Loader extends java.io.Serializable {
     if (sourceName.equals("gravy_users_delete")) {
       new Customers().delete(sparkSession, sc, sql, source, target, format, stringBuilder)
     }
-    if (sourceName.equals("levelup_users_delete")) {
-      new LevelUP().delete(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("mixpanel_users_delete")) {
-      new MixPanel().deleteProps(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("mixpanel_web_delete")) {
-      new MixPanel().deleteWeb(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("kustomer_customers_delete")) {
-      new Kustomer().delete(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
     sparkSession.stop()
     System.exit(0);
   }
