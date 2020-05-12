@@ -100,24 +100,6 @@ object Loader extends java.io.Serializable {
     if (sourceName.equals("gravy_users")) {
       new Customers().deIdentify(sparkSession, sc, sql, source, target, format, stringBuilder)
     }
-    if (sourceName.equals("levelup_users")) {
-      new LevelUP().deIdentify(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("mixpanel_users")) {
-      new MixPanel().deIdentifyProps(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-      if (sourceName.equals("mixpanel_web")) {
-      new MixPanel().deIdentifyWeb(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("kustomer_customers")) {
-      new Kustomer().deIdentify(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("yepchat")) {
-      new YepChat().deIdentify(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
-    if (sourceName.equals("qsr")) {
-      new QSR().deIdentify(sparkSession, sc, sql, source, target, format, stringBuilder)
-    }
     /*DDB ID  Service writers*/
     if (sourceName.equals("writer")) {
       /*unload comes from Redshift*/
