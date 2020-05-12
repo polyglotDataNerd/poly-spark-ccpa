@@ -3,13 +3,13 @@
 Scanning application to de-identify and delete objects from generic Data Lake to replace/remove PII data to be fully anonymized
 
 **Process**
-![Anonymizer](images/Anonmyizer.jpeg)
+![Anonymizer](images/Anonmyizer.png)
 
 **Workflow**
-![Anonymizer](images/Anonmyizer-WorkFlow.jpeg)
+![Anonymizer](images/Anonmyizer-WorkFlow.png)
 
 **Deletion**
-![Deletor](images/DataLake-Deletion.jpeg)
+![Deletor](images/DataLake-Deletion.png)
 
 Dependencies:
 - Java 8 
