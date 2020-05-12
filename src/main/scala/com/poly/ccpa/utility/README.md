@@ -8,7 +8,7 @@ Dependencies:
 Classes
 -
 
-* [DynamoDB ID Bulk Writer](https://github.com/polyglotDataNerd/poly-spark-ccpa/blob/master/src/main/scala/com/sg/ccpa/utility/IDWriter.scala)
+* [DynamoDB ID Bulk Writer](https://github.com/polyglotDataNerd/poly-spark-ccpa/blob/master/src/main/scala/com/poly/ccpa/utility/IDWriter.scala)
 
      - This object will do a bulk write and build the initial dataset that will live in the DynamoDB identity service. This takes an s3 directory input and transforms into a Spark dateframe. This will do a lookup to another dataframe that will consist of the ID service and insert new ids that do not exist in DDB. 
      - Steps to run the bulk application
