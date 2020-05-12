@@ -75,7 +75,7 @@ class SparkUtils(sc: SparkContext, stringBuilder: java.lang.StringBuilder) exten
     def ddbWrite(dataFrame: DataFrame): Unit = {
       val userDDB: DDB = new DDB()
       /*ddb id service
-      * userDDB.getUUID("email-cgillis@cooley.com").get("email-cgillis@cooley.com")
+      * userDDB.getUUID("test123@test.com").get("test123@test.com")
       * userDDB.writeItem("gravy-1234")
       * */
       try {
