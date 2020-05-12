@@ -46,4 +46,4 @@ MAVEN Project to rebuild run:
 ID DDB Writer
 -
 
-1. To run the Bulk Id Writer [click here](https://github.com/polyglotDataNerd/poly-spark-ccpa/tree/master/src/main/scala/com/sg/ccpa/utility#spark-utilities)
+1. To run the Bulk Id Writer [click here](https://github.com/polyglotDataNerd/poly-spark-ccpa/tree/master/src/main/scala/com/poly/ccpa/utility#spark-utilities)
