@@ -1,0 +1,14 @@
+*.DS_Store
+*.properties
+*.jar
+*.iml
+.idea/
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*target/*
+*yepchat_sample.json*
+*dependency-reduced-pom.xml*
