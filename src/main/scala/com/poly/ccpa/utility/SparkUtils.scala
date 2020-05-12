@@ -73,6 +73,7 @@ class SparkUtils(sc: SparkContext, stringBuilder: java.lang.StringBuilder) exten
    */
   object DBB {
     def ddbWrite(dataFrame: DataFrame): Unit = {
+      val userDDB: DDB = new DDB()
       /*ddb id service
       * userDDB.getUUID("email-cgillis@cooley.com").get("email-cgillis@cooley.com")
       * userDDB.writeItem("gravy-1234")
@@ -83,7 +84,6 @@ class SparkUtils(sc: SparkContext, stringBuilder: java.lang.StringBuilder) exten
         staticDF.value
           .repartition(partitions)
           .foreachPartition(partition => {
-            val userDDB: DDB = new DDB()
             partition.foreach(record => {
               userDDB.writeItem(record.getAs[String]("sourceSystemId"), record.getAs[String]("uuid"))
             })
