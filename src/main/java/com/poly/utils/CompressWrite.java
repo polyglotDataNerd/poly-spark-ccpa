@@ -8,29 +8,29 @@ import java.util.zip.GZIPOutputStream;
  */
 public class CompressWrite implements Serializable {
 
-    public ByteArrayOutputStream writestreamGZIP(String inputdata) throws IOException {
+    public ByteArrayOutputStream writestreamGZIP(String inputdata) {
 
-        ByteArrayOutputStream out = new ByteArrayOutputStream(50000000);
-        try (GZIPOutputStream gzip = new GZIPOutputStream(out);
+        OutputStream out = new ByteArrayOutputStream(50000000);
+        try (OutputStream gzip = new GZIPOutputStream(out);
              BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(gzip, "UTF-8"), 1024)) {
             bw.write(inputdata);
         } catch (Exception e) {
             System.out.println(e.toString());
 
         }
-        return out;
+        return (ByteArrayOutputStream) out;
     }
 
-    public ByteArrayOutputStream writestream(String inputdata) throws IOException {
+    public ByteArrayOutputStream writestream(String inputdata) {
 
-        ByteArrayOutputStream out = new ByteArrayOutputStream(50000000);
+        OutputStream out = new ByteArrayOutputStream(50000000);
         try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out, "UTF-8"), 1024)) {
             bw.write(inputdata);
         } catch (Exception e) {
             System.out.println(e.toString());
 
         }
-        return out;
+        return (ByteArrayOutputStream) out;
     }
 
     public String lineReplace(String input) {
